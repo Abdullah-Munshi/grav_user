@@ -1,0 +1,9 @@
+version: '1.2'
+timestamp: 1684937758
+count: 1
+index:
+  netbee:
+    storage_key: netbee
+    storage_timestamp: 1684937757
+    key: netbee
+    email: stackbind@gmail.com

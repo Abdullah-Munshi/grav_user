@@ -1,0 +1,24 @@
+<div class="case-study-area">
+    <div class="container">
+        <div class="secondary-title">
+            <h6 class="text-uppercase">{{page.header.section.title.subHeading}}</h6>
+            <h3>{{page.header.section.title.heading}}</h3>
+        </div>
+        <div class="row">
+            {% for card in page.header.section.content.cards %}
+            {% set image = page.find('/images').media[card.image].url | e %}
+            <div class="col-lg-4 mb-30">
+                <div class="single-offer case-study">
+                    <div class="study-img">
+                        <img src="{{image}}" alt="Post Image" class="img-fluid">
+                    </div>
+                    <h5>{{card.heading}}</h5>
+                    <p>{{card.text}}</p>
+                    <a href="{{url('products')}}" class="cmn-link">{{card.anchor}}<i
+                            class="far fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

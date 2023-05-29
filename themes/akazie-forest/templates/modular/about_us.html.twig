@@ -1,0 +1,24 @@
+<div class="about-us-area {% if page.header.section.insertedIn == 'home_page' %} {{'home_page'}} {% endif %}">
+    <div class="container">
+        {% if page.header.section.title %}
+        <div class="primary-title">
+            <h2>{{page.header.section.title.heading}}</h2>
+            <p class="text_lg ff_fira_sans text_secondary">{{page.header.section.title.text}}
+            </p>
+        </div>
+        {% endif %}
+        <div class="about-g-wrapper">
+            <div class="sec-img">
+                <img src="images/tsec-1.png" alt="" class="img-fluid">
+            </div>
+            <div class="cmn-content about-content">
+                <h6 class="text-uppercase">{{page.header.section.content.right.subtitle}}</h6>
+                <h4>{{page.header.section.content.right.title}}</h4>
+                <p>{{page.header.section.content.right.text}}</p>
+                <a href="#" class="box-btn">{{page.header.section.content.right.anchor}}<i
+                        class="fal fa-angle-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

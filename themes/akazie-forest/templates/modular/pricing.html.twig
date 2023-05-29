@@ -1,0 +1,19 @@
+<div class="price-area">
+    <div class="container">
+        <div class="primary-title">
+            <h6>{{page.header.section.title.subHeading}}</h6>
+            <h2>{{page.header.section.title.heading}}</h2>
+            <p>{{page.header.section.title.text}}</p>
+        </div>
+
+        <div class="price-card-g-wrapper">
+            {% for card in page.header.section.content.cards %}
+            <div class="price-card">
+                <h5 class="price">{{card.price}}.– <span class="d-block">{{card.priceText}}</span></h5>
+                <p>{{card.text}}</p>
+                <a href="#" class="box-btn">{{card.anchor}}<i class="far fa-angle-right"></i></a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

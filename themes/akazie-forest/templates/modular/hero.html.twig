@@ -1,0 +1,23 @@
+{% set videoOne = page.find('/videos').media[page.header.section.content.right.video].url | e %}
+<div class="hero-area position-relative d-flex align-items-center">
+    <div class="container">
+        <div class="hero-content">
+            <h6 class="text-uppercase">{{page.header.section.content.left.subtitle}}</h6>
+            <h1>{{page.header.section.content.left.title}}</h1>
+            <p>{{page.header.section.content.left.text}}</p>
+            <a href="#" class="box-btn type-2">{{page.header.section.content.left.anchor}}<i
+                    class="far fa-angle-right"></i></a>
+            <div>
+                <a href="#" class="cmn-link type-2 type-3"><svg class="mr-10" xmlns="http://www.w3.org/2000/svg"
+                        width="36" height="25.5" viewBox="0 0 36 25.5" class="ml-0">
+                        <path id="Icon_material-laptop-chromebook" data-name="Icon material-laptop-chromebook"
+                            d="M33,27V4.5H3V27H0v3H36V27ZM21,27H15V25.5h6Zm9-4.5H6V7.5H30Z"
+                            transform="translate(0 -4.5)" fill="#555" />
+                    </svg>{{page.header.section.content.left.anchorTwo}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-video position-absolute">
+        <video autoplay muted loop src="{{videoOne}}"></video>
+    </div>
+</div>

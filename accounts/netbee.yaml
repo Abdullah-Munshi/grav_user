@@ -1,0 +1,11 @@
+state: enabled
+email: stackbind@gmail.com
+fullname: 'Abdullah Munshi'
+title: Administrator
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$0Zc1bDr8/Wp0ohR/lb4SO.LnqShyrU.KQe2bJDiTihXkxTQ3VWU0W

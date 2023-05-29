@@ -1,0 +1,22 @@
+<div class="team-area">
+    <div class="container">
+        <div class="team-g-wrapper">
+            {% for member in page.header.section.content.members %}
+            {% set memberImg = page.find('/images').media[member.img].url | e%}
+            <div class="team-member">
+                <div class="member-img">
+                    <img class="img-fluid w-100 border_radius_sm" src="{{memberImg}}" alt="Member Image">
+                </div>
+                <div class="secondary-title member-content mb-0">
+                    <h6 class="text-uppercase">{{member.designation}}</h6>
+                    <h3>{{member.name}}</h3>
+                    <ul class="ct-list">
+                        <li><i class="fal fa-envelope"></i>{{member.mail}}</li>
+                        <li><i class="fab fa-linkedin"></i>{{member.linkedin}}</li>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

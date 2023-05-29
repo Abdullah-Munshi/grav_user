@@ -1,0 +1,18 @@
+<div class="case-study-area">
+    <div class="container">
+        <div class="secondary-title">
+            <h3>{{page.header.section.title.heading}}</h3>
+        </div>
+        <div class="row">
+            {% for card in page.header.section.content.cards %}
+            <div class="col-lg-4 mb-30">
+                <div class="single-offer case-study">
+                    <h5>{{card.heading}}</h5>
+                    <p>{{card.text}}</p>
+                    <a href="#" class="cmn-link">{{card.anchor}}<i class="far fa-long-arrow-right"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

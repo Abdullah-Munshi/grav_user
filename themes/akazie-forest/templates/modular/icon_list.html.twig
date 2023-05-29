@@ -1,0 +1,24 @@
+<div class="icon-list-area">
+    <div class="container">
+        <div class="secondary-title">
+            <h6 class="text-uppercase">{{page.header.section.title.subHeading}}</h6>
+            <h3>{{page.header.section.title.heading}}</h3>
+        </div>
+
+        <div class="row">
+            {% for card in page.header.section.content.cards %}
+            {% set icon = page.find('/images').media[card.icon].url | e %}
+            <div class="col-lg-3 col-md-6 mb-30">
+                <div class="cmn-content icon-list-content">
+                    <div class="icn-icon">
+                        <img src="{{icon}}" alt="" class="img-fluid">
+                    </div>
+                    <h4>{{card.heading}}</h4>
+                    <p>{{card.text}}</p>
+                    <a href="#" class="box-btn">Default State<i class="far fa-angle-right"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

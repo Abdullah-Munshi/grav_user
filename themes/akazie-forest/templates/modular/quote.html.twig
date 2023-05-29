@@ -1,0 +1,46 @@
+<div class="quote-area">
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for slide in page.header.section.slides %}
+                {% set invertedIcon = page.find('/images').media[slide.img].url | e %}
+                {% if loop.first %}
+                <div class="carousel-item active">
+                    <div class="quote-item">
+                        <span class="quote-inverted d-inline-block">
+                            <img src="{{invertedIcon}}" alt="Inverted Icon">
+                        </span>
+                        <p>{{slide.text}}</p>
+                        <div class="quote-author">
+                            <span class="designation">{{slide.designation}}</span>
+                            <h6>{{slide.author}}</h6>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <div class="carousel-item">
+                    <div class="quote-item">
+                        <span class="quote-inverted d-inline-block">
+                            <img src="{{invertedIcon}}" alt="Inverted Icon">
+                        </span>
+                        <p>{{slide.text}}</p>
+                        <div class="quote-author">
+                            <span class="designation text-capitalize">{{slide.designation}}</span>
+                            <h6>{{slide.author}}</h6>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <i class="fal fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <i class="fal fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<footer class="footer-area">
+    <div class="footer-top">
+        <div class="container-fluid cs-padding">
+            <div class="ft-g-wrapper">
+                <div class="ft-widget-first">
+                    <h3>{{page.header.section.content.left.heading| nl2br | raw}}</h3>
+                    <div class="social-wrap d-flex align-items-center flex-wrap">
+                        <h5>{{page.header.section.content.left.followText}}</h5>
+                        <ul class="social-links d-flex align-items-center">
+                            {% for li in page.header.section.content.left.socials %}
+                            <li><a href="{{li.link}}" target="_blank">{{li.icon | raw}}</a></li>
+                            {% endfor %}
+                        </ul>
+
+                    </div>
+                    <p>{{page.header.section.content.left.mail}} | {{page.header.section.content.left.phone}}</p>
+                </div>
+                <div class="ft-widget">
+                    <h3>{{page.header.section.content.right.navigation.title}}</h3>
+                    <ul class="ft-nv">
+                        <li><a href="{{url('home')}}">{{page.header.section.content.right.navigation.nav1}}</a></li>
+                        <li><a href="{{url('products')}}">{{page.header.section.content.right.navigation.nav2}}</a></li>
+                        <li><a href="{{url('about')}}">{{page.header.section.content.right.navigation.nav3}}</a></li>
+                    </ul>
+                </div>
+                <div class="ft-widget">
+                    <h3>{{page.header.section.content.right.address.title}}</h3>
+                    <p>{{page.header.section.content.right.address.addressText | nl2br | raw}}</p>
+                </div>
+                <div class="ft-widget">
+                    <h3>{{page.header.section.content.right.openningHour.title}}</h3>
+                    <p>{{page.header.section.content.right.openningHour.openningHourText | nl2br | raw}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container-fluid cs-padding">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="m-0">Designed by Akazie IT | © 2022 Musterfirma | All rights reserved</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="ft-links d-md-flex align-items-center justify-content-end">
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
