@@ -123,7 +123,7 @@ a {
 }
 
 .secondary-title h3 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 15px;
     line-height: 40px;
 }
@@ -725,7 +725,7 @@ a {
     font-size: 28px;
     color: var(--secondaryLight);
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .social-wrap h5 {
@@ -802,6 +802,10 @@ a {
     margin-bottom: 0;
 }
 
+.product-item .cmn-link.type-2 svg {
+    margin-right: 12px;
+}
+
 /* portfolio-area css end */
 
 
@@ -860,6 +864,25 @@ a {
 .team-area {
     padding: 110px 0;
     background-color: var(--tertiary);
+}
+
+.member-img {
+    margin-bottom: 24px;
+}
+
+.ct-list li a,
+.ct-list li {
+    color: var(--primary);
+    font-size: 18px;
+    font-family: var(--fira_sans);
+}
+
+.ct-list li i {
+    margin-right: 10px;
+}
+
+.ct-list li:not(:last-child) {
+    margin-bottom: 5px;
 }
 
 /* team-area css end */

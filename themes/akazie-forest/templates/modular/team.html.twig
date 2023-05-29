@@ -11,8 +11,10 @@
                     <h6 class="text-uppercase">{{member.designation}}</h6>
                     <h3>{{member.name}}</h3>
                     <ul class="ct-list">
-                        <li><i class="fal fa-envelope"></i>{{member.mail}}</li>
-                        <li><i class="fab fa-linkedin"></i>{{member.linkedin}}</li>
+                        <li><i class="fal fa-envelope"></i><a href="#" class="d-inline-block">{{member.mail}}</a></li>
+                        <li><i class="fab fa-linkedin"></i><a href="{{member.linkedin.linkedinLink}}" target="_blank"
+                                class="d-inline-block text-decoration-underline">{{member.linkedin.linkedinText}}</a>
+                        </li>
                     </ul>
                 </div>
             </div>
