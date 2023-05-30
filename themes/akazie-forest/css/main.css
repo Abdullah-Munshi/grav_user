@@ -113,13 +113,12 @@ a {
 .secondary-title {
     margin-bottom: 45px;
 }
-
-.secondary-title h6 {
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 3px;
-    font-size: 24px;
-    line-height: 32px;
+.secondary-title h6, .primary-title h6 {
+	font-weight: 600;
+	color: var(--primary);
+	margin-bottom: 3px;
+	font-size: 24px;
+	line-height: 32px;
 }
 
 .secondary-title h3 {
@@ -827,11 +826,12 @@ a {
     border-radius: 10px;
     text-align: center;
     padding: 30px;
+    box-shadow: 0 5px 30px rgba(195, 195, 195, 0.16);
 }
-
 .price-area {
-    padding: 100px 0;
-    background-color: var(--tertiary);
+	padding: 100px 0;
+	background-color: var(--tertiary);
+	padding-bottom: 130px;
 }
 
 .range-area {
@@ -850,6 +850,28 @@ a {
     border-radius: 5px;
 }
 
+.price-card .price {
+    font-size: 120px;
+    color: #B6D191;
+    line-height: 1;
+    font-family: var(--fira_sans);
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .price-card .price span {
+    font-size: 20px;
+    color: #8D8D8D;
+  }
+  .price-card p {
+    color: #8D8D8D;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: var(--fira_sans);
+    margin-bottom: 24px;
+  }
+  .price-card-g-wrapper .price-card:nth-child(2) {
+	transform: scaleY(1.2) scaleX(1.05);
+}
 /* product page css end */
 
 /* about-us-area css start */
@@ -1120,16 +1142,23 @@ a {
 }
 
 .m_menu_footer {
-    background-color: #5A784D;
-    padding: 30px;
+	background-color: #5A784D;
+	padding: 30px;
+	margin-top: auto;
 }
-
 .mobile_menu-inner {
-    overflow-y: scroll;
-    height: 100vh;
-    padding-top: 60px;
+	overflow-y: scroll;
+	height: 100vh;
+	padding-top: 60px;
+	display: flex;
+	flex-direction: column;
 }
-
+.m_menu_footer .ft-widget h3, .m_menu_footer .ft-widget p {
+	color: #fff;
+}
+.m_menu_footer .ft-widget:not(:last-child) {
+	margin-bottom: 24px;
+}
 /* mobile menu css end */
 
 
@@ -1235,6 +1264,27 @@ a {
     .header-right a:not(:first-child) {
         margin-left: 24px;
     }
+    .product-g-wrapper,
+    .price-card-g-wrapper {
+        grid-column-gap: 30px;
+    }
+    .price-card-g-wrapper .price-card:nth-child(2) {
+        transform: none;
+    }
+    .price-area {
+        padding: 100px 0;
+        padding-bottom: 100px;
+    }
+    .price-card-g-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .address-wrapper {
+        grid-gap: 24px;
+        grid-template-columns: 1fr 1.5fr;
+    }
+    .contact-area {
+        padding: 60px 0;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -1297,6 +1347,33 @@ a {
         background-color: var(--primaryDark);
         padding: 50px 0;
     }
+    .team-g-wrapper {
+        grid-column-gap: 24px;
+        grid-row-gap: 40px;
+    }
+    .secondary-title h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        line-height: 30px;
+    }
+    .secondary-title h6, .primary-title h6 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .team-area {
+        padding: 80px 0;
+    }
+    .about-us-area {
+        padding: 70px 0;
+        padding-bottom: 70px;
+    }
+    .team-g-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .address-wrapper {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
@@ -1305,6 +1382,7 @@ a {
     .secondary-title h3 {
         font-size: 34px;
         margin-bottom: 10px;
+        line-height: 37px;
     }
 
     .secondary-title h6 {
@@ -1337,7 +1415,35 @@ a {
     .cta-area {
         padding: 65px 0;
     }
-
+    .primary-title h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        line-height: 45px;
+    }
+    .product-g-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .portfolio-area {
+        padding: 50px 0;
+    }
+    .price-area {
+        padding: 60px 0;
+    }
+    .quote-item p {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .quote-area {
+        padding: 60px 0;
+    }
+    .ac-btn {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+    .faq-area {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
 }
 
 @media screen and (max-width: 575px) {
